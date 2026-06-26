@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased;color:#1C1C1E;background:#fff}
+::selection{background:#FF6B35;color:#fff}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes floaty2{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+a{color:inherit}
+</style>
+</helmet>
+
+<div ref="{{ setRoot }}" style="--navy:#1A3D7C;--orange:#FF6B35;--green:#2BB673;--sky:#4A90D9;--ink:#1C1C1E;--gray:#6E6E73;--line:#E5E5EA;--accent:#FF6B35;--accent-soft:#FFF1EB;position:relative;overflow:hidden;width:100%">
+
+<!-- NAV -->
+<nav ref="{{ setNav }}" style="position:fixed;top:0;left:0;right:0;z-index:100;height:72px;display:flex;align-items:center;border-bottom:1px solid transparent;transition:background .3s,border-color .3s,backdrop-filter .3s">
+  <div style="max-width:1200px;width:100%;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+        <rect x="2" y="17" width="5.2" height="11" rx="1.4" fill="#1A3D7C"/>
+        <rect x="9.4" y="11" width="5.2" height="17" rx="1.4" fill="#1A3D7C"/>
+        <rect x="16.8" y="5.5" width="5.2" height="22.5" rx="1.4" fill="#4A90D9"/>
+        <circle cx="25.6" cy="4.4" r="2.6" fill="#FF6B35"/>
+      </svg>
+      <span style="font-size:20px;font-weight:800;letter-spacing:-.01em;color:#1A3D7C">MS마켓</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:30px;font-size:15px;font-weight:600;color:#393C41" data-nav-links>
+      <a href="#services" style="text-decoration:none">서비스</a>
+      <a href="#why" style="text-decoration:none">차별점</a>
+      <a href="#process" style="text-decoration:none">프로세스</a>
+      <a href="#pricing" style="text-decoration:none">요금</a>
+      <a href="#cases" style="text-decoration:none">성과</a>
+    </div>
+    <a href="#contact" style="display:inline-flex;align-items:center;height:42px;padding:0 20px;border-radius:6px;background:var(--accent);color:#fff;font-size:15px;font-weight:700;text-decoration:none;transition:filter .2s,transform .2s" style-hover="filter:brightness(.93);transform:translateY(-1px)">무료 진단 신청</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="top" style="min-height:100vh;display:flex;align-items:center;padding:120px 24px 70px;background:radial-gradient(120% 90% at 85% 0%,var(--accent-soft) 0%,#fff 55%)">
+  <div style="max-width:1200px;width:100%;margin:0 auto;display:flex;align-items:center;gap:56px;flex-wrap:wrap">
+    <div style="flex:1 1 460px;min-width:300px">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:26px">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--green)"></span>소상공인·중소기업 전문 마케팅 대행사
+      </div>
+      <h1 style="font-size:clamp(36px,5.4vw,60px);line-height:1.12;font-weight:800;letter-spacing:-.025em;color:var(--ink)">사장님은 본업에만,<br>마케팅은 <span style="color:var(--accent)">MS마켓</span>이.</h1>
+      <p style="margin-top:24px;font-size:clamp(17px,2.1vw,20px);line-height:1.6;color:var(--gray);max-width:480px">광고비는 줄이고, 매출은 올리고.<br>검증된 시스템으로 작은 가게의 매출을 키웁니다.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:34px">
+        <a href="#contact" style="display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 30px;border-radius:7px;background:var(--accent);color:#fff;font-size:16.5px;font-weight:700;text-decoration:none;transition:filter .2s,transform .2s" style-hover="filter:brightness(.93);transform:translateY(-1px)">무료 진단 신청 →</a>
+        <a href="#services" style="display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 28px;border-radius:7px;background:#fff;color:var(--navy);font-size:16.5px;font-weight:700;border:1.5px solid #D5DAE3;text-decoration:none;transition:border-color .2s,transform .2s" style-hover="border-color:var(--navy);transform:translateY(-1px)">서비스 둘러보기</a>
+      </div>
+      <div style="display:flex;gap:26px;flex-wrap:wrap;margin-top:38px">
+        <div style="display:flex;align-items:center;gap:9px;font-size:14.5px;font-weight:600;color:#393C41"><span style="color:var(--green);font-weight:800">✓</span> 전담 매니저 1:1</div>
+        <div style="display:flex;align-items:center;gap:9px;font-size:14.5px;font-weight:600;color:#393C41"><span style="color:var(--green);font-weight:800">✓</span> 월 단위 유연 계약</div>
+        <div style="display:flex;align-items:center;gap:9px;font-size:14.5px;font-weight:600;color:#393C41"><span style="color:var(--green);font-weight:800">✓</span> 투명 리포트</div>
+      </div>
+    </div>
+
+    <div style="flex:1 1 420px;min-width:300px;display:flex;justify-content:center">
+      <div style="position:relative;width:100%;max-width:480px">
+        <div style="position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 26px 20px;box-shadow:0 24px 60px -28px rgba(26,61,124,.35)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+            <div style="font-size:14px;font-weight:700;color:var(--gray)">월별 매출 추이</div>
+            <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:var(--green);background:#E7F6EF;padding:5px 10px;border-radius:999px">▲ 우상향</div>
+          </div>
+          <svg viewBox="0 0 440 280" width="100%" style="display:block" aria-hidden="true">
+            <line x1="20" y1="250" x2="430" y2="250" stroke="#EEF1F5" stroke-width="2"/>
+            <line x1="20" y1="185" x2="430" y2="185" stroke="#F3F5F8" stroke-width="1.5"/>
+            <line x1="20" y1="120" x2="430" y2="120" stroke="#F3F5F8" stroke-width="1.5"/>
+            <line x1="20" y1="55" x2="430" y2="55" stroke="#F3F5F8" stroke-width="1.5"/>
+            <rect x="42" y="190" width="46" height="60" rx="5" fill="#DCE6F4"/>
+            <rect x="118" y="158" width="46" height="92" rx="5" fill="#C3D6EE"/>
+            <rect x="194" y="120" width="46" height="130" rx="5" fill="#9FBEE6"/>
+            <rect x="270" y="92" width="46" height="158" rx="5" fill="#4A90D9"/>
+            <rect x="346" y="50" width="46" height="200" rx="5" fill="#1A3D7C"/>
+            <polyline points="65,196 141,162 217,124 293,96 369,56" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="65" cy="196" r="5" fill="#fff" stroke="var(--accent)" stroke-width="3"/>
+            <circle cx="141" cy="162" r="5" fill="#fff" stroke="var(--accent)" stroke-width="3"/>
+            <circle cx="217" cy="124" r="5" fill="#fff" stroke="var(--accent)" stroke-width="3"/>
+            <circle cx="293" cy="96" r="5" fill="#fff" stroke="var(--accent)" stroke-width="3"/>
+            <circle cx="369" cy="56" r="6.5" fill="var(--accent)"/>
+          </svg>
+        </div>
+        <div style="position:absolute;top:-18px;left:-14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 15px;box-shadow:0 12px 30px -12px rgba(0,0,0,.18);animation:floaty 5s ease-in-out infinite">
+          <div style="font-size:12px;font-weight:700;color:var(--gray)">매출</div>
+          <div style="font-size:18px;font-weight:800;color:var(--green)">▲ 성장</div>
+        </div>
+        <div style="position:absolute;bottom:-16px;right:-12px;background:var(--navy);border-radius:12px;padding:11px 15px;box-shadow:0 12px 30px -12px rgba(26,61,124,.5);animation:floaty2 6s ease-in-out infinite">
+          <div style="font-size:12px;font-weight:700;color:#AFC4E6">광고비</div>
+          <div style="font-size:18px;font-weight:800;color:#fff">▼ 거품 제거</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section id="problems" style="padding:96px 24px;background:#F6F7F9;scroll-margin-top:90px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div data-reveal style="text-align:center;max-width:620px;margin:0 auto 52px">
+      <div style="font-size:14px;font-weight:800;color:var(--accent);letter-spacing:.02em">사장님의 고민</div>
+      <h2 style="margin-top:12px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.22;color:var(--ink)">이런 고민, 한 번쯤 있으셨죠?</h2>
+      <p style="margin-top:16px;font-size:17px;line-height:1.65;color:var(--gray)">소상공인·중소기업이 마케팅에서 겪는 현실적인 어려움, MS마켓이 시스템으로 풀어드립니다.</p>
+    </div>
+    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px">
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px">
+        <div style="font-size:16.5px;font-weight:700;color:var(--ink)">“광고비만 쓰고 효과를 모르겠어요”</div>
+        <div style="display:flex;align-items:center;gap:10px;color:var(--green);font-weight:700;font-size:14px"><span style="font-size:18px">↳</span>매출 기준 성과 측정·리포팅</div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px">
+        <div style="font-size:16.5px;font-weight:700;color:var(--ink)">“직접 할 시간이 없어요”</div>
+        <div style="display:flex;align-items:center;gap:10px;color:var(--green);font-weight:700;font-size:14px"><span style="font-size:18px">↳</span>콘텐츠·광고 운영 풀대행</div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px">
+        <div style="font-size:16.5px;font-weight:700;color:var(--ink)">“대행사에 맡겼다가 데인 적 있어요”</div>
+        <div style="display:flex;align-items:center;gap:10px;color:var(--green);font-weight:700;font-size:14px"><span style="font-size:18px">↳</span>월 단위 계약·투명 리포트·전담 매니저</div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px">
+        <div style="font-size:16.5px;font-weight:700;color:var(--ink)">“어디서부터 시작할지 모르겠어요”</div>
+        <div style="display:flex;align-items:center;gap:10px;color:var(--green);font-weight:700;font-size:14px"><span style="font-size:18px">↳</span>무료 진단 후 단계별 로드맵 제시</div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px">
+        <div style="font-size:16.5px;font-weight:700;color:var(--ink)">“예산이 빠듯해요”</div>
+        <div style="display:flex;align-items:center;gap:10px;color:var(--green);font-weight:700;font-size:14px"><span style="font-size:18px">↳</span>소상공인 맞춤 소액·성과형 패키지</div>
+      </div>
+      <div style="background:var(--navy);border-radius:14px;padding:24px;display:flex;flex-direction:column;justify-content:center;gap:8px">
+        <div style="font-size:15px;font-weight:700;color:#AFC4E6">MS마켓의 약속</div>
+        <div style="font-size:19px;font-weight:800;color:#fff;line-height:1.4">노출·좋아요가 아니라<br>문의·예약·매출로 증명합니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="padding:104px 24px;background:#fff;scroll-margin-top:90px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div data-reveal style="max-width:640px;margin-bottom:52px">
+      <div style="font-size:14px;font-weight:800;color:var(--accent);letter-spacing:.02em">핵심 서비스</div>
+      <h2 style="margin-top:12px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.22;color:var(--ink)">매출로 이어지는 다섯 가지 채널, 한 팀이 운영합니다.</h2>
+    </div>
+    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
+      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" style-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
+        <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">01</div>
+        <h3 style="font-size:20px;font-weight:800;color:var(--ink)">로컬·플레이스 마케팅</h3>
+        <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>네이버 플레이스 / 지도 상위노출 최적화</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>방문자 리뷰·예약·톡톡 관리</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>지역 키워드 블로그·체험단 운영</li>
+        </ul>
+      </div>
+      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" style-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
+        <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">02</div>
+        <h3 style="font-size:20px;font-weight:800;color:var(--ink)">콘텐츠 마케팅</h3>
+        <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>인스타그램·릴스·숏폼 기획 및 제작</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>상세페이지·브랜드 스토리 카피라이팅</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>네이버 블로그 / 스마트스토어 운영</li>
+        </ul>
+      </div>
+      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" style-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
+        <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">03</div>
+        <h3 style="font-size:20px;font-weight:800;color:var(--ink)">퍼포먼스 광고</h3>
+        <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>메타·구글·네이버 광고 운영</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>타겟 세팅·소재 A/B 테스트·예산 최적화</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>전환 추적(픽셀·전환 API) 세팅</li>
+        </ul>
+      </div>
+      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" style-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
+        <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">04</div>
+        <h3 style="font-size:20px;font-weight:800;color:var(--ink)">브랜딩·기획</h3>
+        <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>로고·BI, 브랜드 톤앤매너 정립</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>신규 오픈·리뉴얼 마케팅 패키지</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>캠페인·프로모션 기획</li>
+        </ul>
+      </div>
+      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" style-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
+        <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">05</div>
+        <h3 style="font-size:20px;font-weight:800;color:var(--ink)">데이터·자동화</h3>
+        <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>GA4·광고 데이터 통합 대시보드 구축</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>월간 성과 리포트 자동화</li>
+          <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>고객 DB·재방문 유도 시스템</li>
+        </ul>
+      </div>
+      <div style="border-radius:16px;padding:30px;background:linear-gradient(150deg,var(--navy),#244a8f);color:#fff;display:flex;flex-direction:column;justify-content:center">
+        <h3 style="font-size:21px;font-weight:800;line-height:1.35">필요한 것만 골라,<br>패키지로 운영하세요.</h3>
+        <p style="margin-top:14px;font-size:15px;line-height:1.6;color:#C9D7EE">업종·예산에 맞춰 채널을 조합합니다. 무료 진단으로 우리 가게에 맞는 조합을 찾아보세요.</p>
+        <a href="#contact" style="margin-top:22px;display:inline-flex;align-items:center;gap:7px;font-size:15px;font-weight:800;color:#fff;text-decoration:none">맞춤 조합 보기 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" style="padding:104px 24px;background:#F6F7F9;scroll-margin-top:90px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div data-reveal style="max-width:640px;margin-bottom:52px">
+      <div style="font-size:14px;font-weight:800;color:var(--accent);letter-spacing:.02em">선택해야 하는 이유</div>
+      <h2 style="margin-top:12px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.22;color:var(--ink)">작은 가게를 가장 잘 아는 마케팅 파트너.</h2>
+    </div>
+    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px">
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px">
+        <div style="width:36px;height:36px;border-radius:9px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;margin-bottom:16px">＋</div>
+        <h3 style="font-size:18px;font-weight:800;color:var(--ink)">소상공인 전문</h3>
+        <p style="margin-top:10px;font-size:15px;line-height:1.6;color:var(--gray)">대형 광고주가 아닌, 작은 가게의 구조와 예산에 맞춘 운영.</p>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px">
+        <div style="width:36px;height:36px;border-radius:9px;background:#E7F6EF;display:flex;align-items:center;justify-content:center;color:var(--green);font-weight:900;margin-bottom:16px">↑</div>
+        <h3 style="font-size:18px;font-weight:800;color:var(--ink)">매출 중심 KPI</h3>
+        <p style="margin-top:10px;font-size:15px;line-height:1.6;color:var(--gray)">노출·좋아요가 아니라 문의·예약·매출로 성과를 증명합니다.</p>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px">
+        <div style="width:36px;height:36px;border-radius:9px;background:#EAF0FA;display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:900;margin-bottom:16px">◎</div>
+        <h3 style="font-size:18px;font-weight:800;color:var(--ink)">투명한 리포트</h3>
+        <p style="margin-top:10px;font-size:15px;line-height:1.6;color:var(--gray)">광고비·성과를 월 단위로 공개합니다. 숨김 마진 없음.</p>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px">
+        <div style="width:36px;height:36px;border-radius:9px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:900;margin-bottom:16px">♟</div>
+        <h3 style="font-size:18px;font-weight:800;color:var(--ink)">전담 매니저</h3>
+        <p style="margin-top:10px;font-size:15px;line-height:1.6;color:var(--gray)">한 명의 담당자가 처음부터 끝까지 책임집니다.</p>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px">
+        <div style="width:36px;height:36px;border-radius:9px;background:#E7F6EF;display:flex;align-items:center;justify-content:center;color:var(--green);font-weight:900;margin-bottom:16px">◇</div>
+        <h3 style="font-size:18px;font-weight:800;color:var(--ink)">부담 없는 계약</h3>
+        <p style="margin-top:10px;font-size:15px;line-height:1.6;color:var(--gray)">장기 약정 강요 없이 월 단위 유연 계약으로 시작합니다.</p>
+      </div>
+      <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;justify-content:center;gap:6px">
+        <div style="font-size:14px;font-weight:700;color:var(--gray)">슬로건</div>
+        <div style="font-size:21px;font-weight:800;line-height:1.35;color:var(--navy)">광고비는 줄이고,<br>매출은 올리고.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="padding:104px 24px;background:#fff;scroll-margin-top:90px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div data-reveal style="text-align:center;max-width:640px;margin:0 auto 56px">
+      <div style="font-size:14px;font-weight:800;color:var(--accent);letter-spacing:.02em">진행 프로세스</div>
+      <h2 style="margin-top:12px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.22;color:var(--ink)">무료 진단부터 확장까지, 6단계.</h2>
+    </div>
+    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px">
+      <div style="border:1px solid var(--line);border-radius:14px;padding:24px 20px;position:relative">
+        <div style="font-size:13px;font-weight:900;color:var(--accent)">STEP 01</div>
+        <h3 style="margin-top:10px;font-size:17px;font-weight:800;color:var(--ink)">무료 진단</h3>
+        <p style="margin-top:8px;font-size:14px;line-height:1.55;color:var(--gray)">매장·SNS·온라인 현황 분석, 개선점 도출</p>
+      </div>
+      <div style="border:1px solid var(--line);border-radius:14px;padding:24px 20px">
+        <div style="font-size:13px;font-weight:900;color:var(--accent)">STEP 02</div>
+        <h3 style="margin-top:10px;font-size:17px;font-weight:800;color:var(--ink)">전략 제안</h3>
+        <p style="margin-top:8px;font-size:14px;line-height:1.55;color:var(--gray)">업종·예산 맞춤 채널과 실행 로드맵 제시</p>
+      </div>
+      <div style="border:1px solid var(--line);border-radius:14px;padding:24px 20px">
+        <div style="font-size:13px;font-weight:900;color:var(--accent)">STEP 03</div>
+        <h3 style="margin-top:10px;font-size:17px;font-weight:800;color:var(--ink)">계약·온보딩</h3>
+        <p style="margin-top:8px;font-size:14px;line-height:1.55;color:var(--gray)">목표(KPI) 합의, 채널 세팅</p>
+      </div>
+      <div style="border:1px solid var(--line);border-radius:14px;padding:24px 20px">
+        <div style="font-size:13px;font-weight:900;color:var(--accent)">STEP 04</div>
+        <h3 style="margin-top:10px;font-size:17px;font-weight:800;color:var(--ink)">실행·운영</h3>
+        <p style="margin-top:8px;font-size:14px;line-height:1.55;color:var(--gray)">콘텐츠 제작·광고 집행 전담 운영</p>
+      </div>
+      <div style="border:1px solid var(--line);border-radius:14px;padding:24px 20px">
+        <div style="font-size:13px;font-weight:900;color:var(--accent)">STEP 05</div>
+        <h3 style="margin-top:10px;font-size:17px;font-weight:800;color:var(--ink)">리포트·개선</h3>
+        <p style="margin-top:8px;font-size:14px;line-height:1.55;color:var(--gray)">월간 성과 투명 공유, 데이터 기반 개선</p>
+      </div>
+      <div style="border:none;border-radius:14px;padding:24px 20px;background:var(--accent-soft)">
+        <div style="font-size:13px;font-weight:900;color:var(--accent)">STEP 06</div>
+        <h3 style="margin-top:10px;font-size:17px;font-weight:800;color:var(--ink)">확장</h3>
+        <p style="margin-top:8px;font-size:14px;line-height:1.55;color:#8a5a44">검증된 채널 증액, 신규 채널 확대</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="padding:104px 24px;background:#F6F7F9;scroll-margin-top:90px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div data-reveal style="text-align:center;max-width:640px;margin:0 auto 18px">
+      <div style="font-size:14px;font-weight:800;color:var(--accent);letter-spacing:.02em">요금 패키지</div>
+      <h2 style="margin-top:12px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.22;color:var(--ink)">우리 가게 단계에 맞는 패키지.</h2>
+    </div>
+    <p data-reveal style="text-align:center;font-size:14.5px;color:var(--gray);margin-bottom:44px">업종·지역·경쟁 강도에 따라 맞춤 견적으로 조정됩니다. (광고비 별도)</p>
+    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;align-items:stretch">
+      <div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;display:flex;flex-direction:column">
+        <div style="font-size:14px;font-weight:800;color:var(--gray)">스타터</div>
+        <div style="margin-top:6px;font-size:14px;color:var(--gray)">1인·신규 창업</div>
+        <div style="margin-top:20px;font-size:30px;font-weight:800;color:var(--ink)">맞춤 견적</div>
+        <div style="margin-top:4px;font-size:13px;color:var(--gray)">월 운영비 · 부담 없이 시작</div>
+        <div style="height:1px;background:var(--line);margin:24px 0"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:15px;color:#393C41;flex:1">
+          <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>네이버 플레이스 최적화</li>
+          <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>월 콘텐츠 8건 제작</li>
+          <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>월간 성과 리포트</li>
+        </ul>
+        <a href="#contact" style="margin-top:26px;display:inline-flex;align-items:center;justify-content:center;height:50px;border-radius:8px;background:#fff;border:1.5px solid #D5DAE3;color:var(--navy);font-weight:700;font-size:15.5px;text-decoration:none;transition:border-color .2s" style-hover="border-color:var(--navy)">문의하기</a>
+      </div>
+
+      <div style="background:#fff;border:2px solid var(--accent);border-radius:18px;padding:32px;display:flex;flex-direction:column;position:relative;box-shadow:0 26px 60px -30px rgba(255,107,53,.5)">
+        <div style="position:absolute;top:-13px;left:32px;background:var(--accent);color:#fff;font-size:12.5px;font-weight:800;padding:5px 13px;border-radius:999px">가장 인기</div>
+        <div style="font-size:14px;font-weight:800;color:var(--accent)">그로스</div>
+        <div style="margin-top:6px;font-size:14px;color:var(--gray)">성장기 소상공인</div>
+        <div style="margin-top:20px;font-size:30px;font-weight:800;color:var(--ink)">맞춤 견적</div>
+        <div style="margin-top:4px;font-size:13px;color:var(--gray)">월 운영비 · 성과형 운영</div>
+        <div style="height:1px;background:var(--line);margin:24px 0"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:15px;color:#393C41;flex:1">
+          <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>스타터 전체 포함</li>
+          <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>퍼포먼스 광고 운영</li>
+          <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>소재 A/B 테스트·예산 최적화</li>
+          <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>전환 추적 세팅</li>
+        </ul>
+        <a href="#contact" style="margin-top:26px;display:inline-flex;align-items:center;justify-content:center;height:50px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;font-size:15.5px;text-decoration:none;transition:filter .2s" style-hover="filter:brightness(.93)">무료 진단 신청</a>
+      </div>
+
+      <div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;display:flex;flex-direction:column">
+        <div style="font-size:14px;font-weight:800;color:var(--gray)">프리미엄</div>
+        <div style="margin-top:6px;font-size:14px;color:var(--gray)">다점포·중소기업</div>
+        <div style="margin-top:20px;font-size:30px;font-weight:800;color:var(--ink)">맞춤 견적</div>
+        <div style="margin-top:4px;font-size:13px;color:var(--gray)">월 운영비 · 통합 관리</div>
+        <div style="height:1px;background:var(--line);margin:24px 0"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:15px;color:#393C41;flex:1">
+          <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>그로스 전체 포함</li>
+          <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>브랜딩·기획</li>
+          <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>데이터 통합 대시보드</li>
+        </ul>
+        <a href="#contact" style="margin-top:26px;display:inline-flex;align-items:center;justify-content:center;height:50px;border-radius:8px;background:#fff;border:1.5px solid #D5DAE3;color:var(--navy);font-weight:700;font-size:15.5px;text-decoration:none;transition:border-color .2s" style-hover="border-color:var(--navy)">문의하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS / CASES -->
+<section id="cases" style="padding:104px 24px;background:var(--navy);scroll-margin-top:90px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div data-reveal style="max-width:640px;margin-bottom:48px">
+      <div style="font-size:14px;font-weight:800;color:#FF8A5E;letter-spacing:.02em">성과 사례</div>
+      <h2 style="margin-top:12px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.22;color:#fff">숫자로 증명하는 성장.</h2>
+      <p style="margin-top:14px;font-size:14px;color:#9DB4D8">아래 수치는 운영 예시이며, 실제 데이터 확보 후 교체됩니다.</p>
+    </div>
+    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px">
+      <div style="background:#21478C;border:1px solid #2E5499;border-radius:16px;overflow:hidden">
+        <div style="height:150px;background:repeating-linear-gradient(135deg,#2B4F94,#2B4F94 12px,#264789 12px,#264789 24px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:12.5px;color:#8FA8D2">[ 업종 A · 매장 사진 ]</div>
+        <div style="padding:24px">
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#fff;background:var(--green);padding:5px 11px;border-radius:999px">▲ 방문자 ○○%</div>
+          <h3 style="margin-top:14px;font-size:18px;font-weight:800;color:#fff">네이버 플레이스 방문자 증가</h3>
+          <p style="margin-top:8px;font-size:14px;line-height:1.55;color:#AFC2E0">지역 키워드 최적화로 지도 노출·방문 상승 — [기간]</p>
+        </div>
+      </div>
+      <div style="background:#21478C;border:1px solid #2E5499;border-radius:16px;overflow:hidden">
+        <div style="height:150px;background:repeating-linear-gradient(135deg,#2B4F94,#2B4F94 12px,#264789 12px,#264789 24px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:12.5px;color:#8FA8D2">[ 업종 B · 광고 리포트 ]</div>
+        <div style="padding:24px">
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#fff;background:var(--green);padding:5px 11px;border-radius:999px">▼ CPA ○○% 절감</div>
+          <h3 style="margin-top:14px;font-size:18px;font-weight:800;color:#fff">광고 전환당 비용 절감</h3>
+          <p style="margin-top:8px;font-size:14px;line-height:1.55;color:#AFC2E0">타겟·소재 최적화로 전환 효율 개선 — [기간]</p>
+        </div>
+      </div>
+      <div style="background:#21478C;border:1px solid #2E5499;border-radius:16px;overflow:hidden">
+        <div style="height:150px;background:repeating-linear-gradient(135deg,#2B4F94,#2B4F94 12px,#264789 12px,#264789 24px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:12.5px;color:#8FA8D2">[ 업종 C · 콘텐츠 ]</div>
+        <div style="padding:24px">
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#fff;background:var(--green);padding:5px 11px;border-radius:999px">▲ 유입 매출 ₩○○</div>
+          <h3 style="margin-top:14px;font-size:18px;font-weight:800;color:#fff">인스타그램 유입 매출 달성</h3>
+          <p style="margin-top:8px;font-size:14px;line-height:1.55;color:#AFC2E0">숏폼·릴스 콘텐츠로 신규 고객 유입 — [기간]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding:104px 24px;background:#fff;scroll-margin-top:90px">
+  <div style="max-width:1080px;margin:0 auto;display:flex;gap:48px;flex-wrap:wrap;align-items:flex-start">
+    <div data-reveal style="flex:1 1 360px;min-width:300px">
+      <div style="font-size:14px;font-weight:800;color:var(--accent);letter-spacing:.02em">무료 진단 신청</div>
+      <h2 style="margin-top:12px;font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.22;color:var(--ink)">1분이면 끝나는 무료 진단,<br>지금 받아보세요.</h2>
+      <p style="margin-top:16px;font-size:16px;line-height:1.65;color:var(--gray)">매장·온라인 현황을 분석하고, 우리 가게에 맞는 채널과 단계별 로드맵을 무료로 제안해드립니다.</p>
+      <div style="margin-top:30px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:center;gap:12px;font-size:15.5px;color:#393C41"><span style="width:34px;height:34px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800">☎</span>[연락처]</div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:15.5px;color:#393C41"><span style="width:34px;height:34px;border-radius:9px;background:#E7F6EF;color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:800">✉</span>[이메일]</div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:15.5px;color:#393C41"><span style="width:34px;height:34px;border-radius:9px;background:#EAF0FA;color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800">＠</span>카카오톡 채널 [아이디]</div>
+      </div>
+    </div>
+
+    <div data-reveal style="flex:1 1 380px;min-width:300px;background:#F6F7F9;border:1px solid var(--line);border-radius:18px;padding:30px">
+      <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:14px;font-weight:700;color:#393C41">상호 / 업종</label>
+            <input type="text" placeholder="예: OO식당 / 외식" style="height:48px;padding:0 14px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none" required="required"/>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:14px;font-weight:700;color:#393C41">연락처</label>
+            <input type="tel" placeholder="010-0000-0000" style="height:48px;padding:0 14px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none" required="required"/>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:14px;font-weight:700;color:#393C41">현재 운영 중인 채널</label>
+            <select style="height:48px;padding:0 12px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none;color:#393C41">
+              <option>네이버 플레이스</option>
+              <option>인스타그램 / SNS</option>
+              <option>스마트스토어</option>
+              <option>아직 없음 / 잘 모름</option>
+            </select>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:14px;font-weight:700;color:#393C41">하고 싶은 말 (선택)</label>
+            <textarea placeholder="가장 고민되는 부분을 적어주세요" style="min-height:84px;padding:12px 14px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none;resize:vertical;font-family:inherit"></textarea>
+          </div>
+          <button type="submit" style="margin-top:4px;height:52px;border:none;border-radius:9px;background:var(--accent);color:#fff;font-size:16.5px;font-weight:800;cursor:pointer;transition:filter .2s,transform .2s" style-hover="filter:brightness(.93);transform:translateY(-1px)">무료 진단 신청하기</button>
+          <p style="font-size:12.5px;color:var(--gray);text-align:center">제출 시 개인정보 처리방침에 동의하는 것으로 간주됩니다.</p>
+        </form>
+      </sc-if>
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ true }}">
+        <div style="text-align:center;padding:40px 10px">
+          <div style="width:64px;height:64px;border-radius:50%;background:#E7F6EF;color:var(--green);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:900;margin:0 auto 20px">✓</div>
+          <h3 style="font-size:22px;font-weight:800;color:var(--ink)">신청이 접수되었어요!</h3>
+          <p style="margin-top:12px;font-size:15.5px;line-height:1.6;color:var(--gray)">전담 매니저가 1영업일 내에 연락드려<br>무료 진단을 진행해드립니다.</p>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#101826;padding:56px 24px 40px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <svg width="26" height="26" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+            <rect x="2" y="17" width="5.2" height="11" rx="1.4" fill="#5C82C0"/>
+            <rect x="9.4" y="11" width="5.2" height="17" rx="1.4" fill="#5C82C0"/>
+            <rect x="16.8" y="5.5" width="5.2" height="22.5" rx="1.4" fill="#4A90D9"/>
+            <circle cx="25.6" cy="4.4" r="2.6" fill="#FF6B35"/>
+          </svg>
+          <span style="font-size:18px;font-weight:800;color:#fff">MS마켓</span>
+        </div>
+        <p style="font-size:14px;color:#7C8AA0;line-height:1.6;max-width:300px">Make Sales — 매출을 만든다.<br>중소기업·소상공인을 위한 실전형 디지털 마케팅 대행사.</p>
+      </div>
+      <div style="display:flex;gap:56px;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:3px">서비스</div>
+          <a href="#services" style="font-size:14px;color:#7C8AA0;text-decoration:none">로컬·플레이스</a>
+          <a href="#services" style="font-size:14px;color:#7C8AA0;text-decoration:none">퍼포먼스 광고</a>
+          <a href="#services" style="font-size:14px;color:#7C8AA0;text-decoration:none">콘텐츠·브랜딩</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:3px">회사</div>
+          <a href="#why" style="font-size:14px;color:#7C8AA0;text-decoration:none">차별점</a>
+          <a href="#process" style="font-size:14px;color:#7C8AA0;text-decoration:none">프로세스</a>
+          <a href="#contact" style="font-size:14px;color:#7C8AA0;text-decoration:none">문의</a>
+        </div>
+      </div>
+    </div>
+    <div style="height:1px;background:#22304A;margin:36px 0 22px"></div>
+    <div style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:#5E6B82">
+      <span>© 2026 MS마켓 (MS Market). All rights reserved.</span>
+      <span>광고비는 줄이고, 매출은 올리고.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- THEME SWITCHER -->
+<div style="position:fixed;left:18px;bottom:18px;z-index:120;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;padding:6px 8px 6px 14px;box-shadow:0 10px 30px -12px rgba(0,0,0,.25)">
+  <span style="font-size:12px;font-weight:800;color:var(--gray)">테마</span>
+  <div style="display:flex;gap:3px;background:#F0F1F4;border-radius:999px;padding:3px">
+    <button data-theme="energy" onClick="{{ onThemeClick }}" style="{{ pillEnergy }}">에너지</button>
+    <button data-theme="trust" onClick="{{ onThemeClick }}" style="{{ pillTrust }}">신뢰</button>
+    <button data-theme="growth" onClick="{{ onThemeClick }}" style="{{ pillGrowth }}">성과</button>
+  </div>
+</div>
+
+<!-- STICKY BAR -->
+<div ref="{{ setBar }}" style="position:fixed;right:18px;bottom:18px;z-index:115;transform:translateY(160%);transition:transform .4s cubic-bezier(.2,.7,.2,1);display:flex;align-items:center;gap:14px;background:var(--navy);border-radius:14px;padding:14px 16px;box-shadow:0 18px 44px -16px rgba(26,61,124,.6);max-width:calc(100vw - 36px)">
+  <div style="display:flex;flex-direction:column;gap:2px">
+    <span style="font-size:13px;font-weight:700;color:#AFC4E6">1분이면 끝나는 무료 진단</span>
+    <span style="font-size:15px;font-weight:800;color:#fff">지금 우리 가게 매출, 진단받아 보세요</span>
+  </div>
+  <a href="#contact" style="display:inline-flex;align-items:center;height:42px;padding:0 18px;border-radius:8px;background:var(--accent);color:#fff;font-size:14.5px;font-weight:800;text-decoration:none;white-space:nowrap;transition:filter .2s" style-hover="filter:brightness(.93)">무료 진단 →</a>
+  <button onClick="{{ closeBar }}" aria-label="닫기" style="border:none;background:transparent;color:#7E97C4;font-size:20px;cursor:pointer;line-height:1;padding:4px">×</button>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;accentTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;energy&quot;,&quot;trust&quot;,&quot;growth&quot;],&quot;default&quot;:&quot;energy&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;stickyBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;revealAnim&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { activeTheme: 'energy', submitted: false, barClosed: false };
+
+  themes = {
+    energy: { a: '#FF6B35', s: '#FFF1EB' },
+    trust:  { a: '#1A3D7C', s: '#EAF0FA' },
+    growth: { a: '#2BB673', s: '#E7F6EF' }
+  };
+
+  applyTheme(name) {
+    const t = this.themes[name] || this.themes.energy;
+    if (this.rootEl) {
+      this.rootEl.style.setProperty('--accent', t.a);
+      this.rootEl.style.setProperty('--accent-soft', t.s);
+    }
+  }
+
+  componentDidMount() {
+    const initial = this.props.accentTheme || 'energy';
+    if (initial !== 'energy') { this.applyTheme(initial); this.setState({ activeTheme: initial }); }
+
+    this._onScroll = () => {
+      const y = window.scrollY || document.documentElement.scrollTop || 0;
+      if (this.navEl) {
+        if (y > 40) {
+          this.navEl.style.background = 'rgba(255,255,255,0.85)';
+          this.navEl.style.backdropFilter = 'saturate(180%) blur(12px)';
+          this.navEl.style.webkitBackdropFilter = 'saturate(180%) blur(12px)';
+          this.navEl.style.borderBottom = '1px solid #E5E5EA';
+        } else {
+          this.navEl.style.background = 'transparent';
+          this.navEl.style.backdropFilter = 'none';
+          this.navEl.style.webkitBackdropFilter = 'none';
+          this.navEl.style.borderBottom = '1px solid transparent';
+        }
+      }
+      if (this.barEl && this.props.stickyBar !== false && !this.state.barClosed) {
+        this.barEl.style.transform = y > 720 ? 'translateY(0)' : 'translateY(160%)';
+      }
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+
+    if (this.props.revealAnim !== false && this.rootEl) {
+      const els = Array.from(this.rootEl.querySelectorAll('[data-reveal]'));
+      els.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)';
+      });
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((ents) => {
+          ents.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.style.opacity = '1';
+              e.target.style.transform = 'none';
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        els.forEach(el => io.observe(el));
+        this._io = io;
+      } else {
+        els.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+      }
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._io) this._io.disconnect();
+  }
+
+  renderVals() {
+    const at = this.state.activeTheme;
+    const pill = (name) => Object.assign(
+      { border: 'none', cursor: 'pointer', fontSize: '12.5px', fontWeight: 700, padding: '6px 12px', borderRadius: '999px', transition: 'all .2s' },
+      at === name ? { background: 'var(--accent)', color: '#fff' } : { background: 'transparent', color: '#6E6E73' }
+    );
+    return {
+      setRoot: (el) => { this.rootEl = el; },
+      setNav: (el) => { this.navEl = el; },
+      setBar: (el) => { this.barEl = el; },
+      onThemeClick: (e) => {
+        const n = e.currentTarget.getAttribute('data-theme');
+        this.applyTheme(n);
+        this.setState({ activeTheme: n });
+      },
+      onSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+      closeBar: () => {
+        this.setState({ barClosed: true });
+        if (this.barEl) this.barEl.style.transform = 'translateY(160%)';
+      },
+      pillEnergy: pill('energy'),
+      pillTrust: pill('trust'),
+      pillGrowth: pill('growth'),
+      submitted: this.state.submitted,
+      notSubmitted: !this.state.submitted
+    };
+  }
+}
+</script>
+</body>
+</html>
