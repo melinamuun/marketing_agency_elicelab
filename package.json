@@ -5,7 +5,8 @@
   "description": "MS마켓 랜딩페이지 + 플로팅 상담 챗봇",
   "scripts": {
     "dev": "node server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "ingest": "node scripts/ingest.js"
   },
   "engines": {
     "node": ">=18"

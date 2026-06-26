@@ -9,6 +9,7 @@ const fs = require('fs');
 const path = require('path');
 
 const { getChatReply, readJsonBody, ChatError } = require('./lib/chat');
+const leadHandler = require('./api/lead'); // /api/lead — Vercel 함수와 동일 핸들러 재사용
 
 const PORT = process.env.PORT || 3000;
 const ROOT = __dirname;
@@ -59,7 +60,7 @@ async function handleChat(req, res) {
   if (req.method !== 'POST') return sendJson(res, 405, { error: 'POST 요청만 허용됩니다.' });
   try {
     const body = await readJsonBody(req);
-    const reply = await getChatReply(body && body.messages);
+    const reply = await getChatReply(body && body.messages, { sessionId: body && body.sessionId });
     sendJson(res, 200, { reply });
   } catch (err) {
     const status = err instanceof ChatError ? err.status : 500;
@@ -95,6 +96,7 @@ function serveStatic(req, res) {
 const server = http.createServer((req, res) => {
   const pathname = (req.url || '/').split('?')[0];
   if (pathname === '/api/chat') return handleChat(req, res);
+  if (pathname === '/api/lead') return leadHandler(req, res);
   return serveStatic(req, res);
 });
 

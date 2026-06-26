@@ -15,6 +15,7 @@
   }
 
   var history = [];      // {role, content}
+  var sessionId = 'sid-' + Math.random().toString(36).slice(2) + '-' + (window.performance && performance.now ? Math.floor(performance.now()) : 0);
   var open = false;
   var loading = false;
   var welcomed = false;
@@ -239,7 +240,7 @@
       var res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: history.slice(-MAX_HISTORY) }),
+        body: JSON.stringify({ messages: history.slice(-MAX_HISTORY), sessionId: sessionId }),
       });
       var data = await res.json().catch(function () { return {}; });
       hideTyping();

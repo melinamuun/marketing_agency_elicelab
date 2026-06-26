@@ -15,7 +15,7 @@ module.exports = async (req, res) => {
 
   try {
     const body = await readJsonBody(req);
-    const reply = await getChatReply(body && body.messages);
+    const reply = await getChatReply(body && body.messages, { sessionId: body && body.sessionId });
     res.statusCode = 200;
     res.end(JSON.stringify({ reply }));
   } catch (err) {

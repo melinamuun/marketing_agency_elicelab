@@ -61,29 +61,7 @@ a{color:inherit}
 
     <div style="flex:1 1 420px;min-width:300px;display:flex;justify-content:center">
       <div style="position:relative;width:100%;max-width:480px">
-        <div style="position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 26px 20px;box-shadow:0 24px 60px -28px rgba(26,61,124,.35)">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
-            <div style="font-size:14px;font-weight:700;color:var(--gray)">월별 매출 추이</div>
-            <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:var(--green);background:#E7F6EF;padding:5px 10px;border-radius:999px">▲ 우상향</div>
-          </div>
-          <svg viewBox="0 0 440 280" width="100%" style="display:block" aria-hidden="true">
-            <line x1="20" y1="250" x2="430" y2="250" stroke="#EEF1F5" stroke-width="2"/>
-            <line x1="20" y1="185" x2="430" y2="185" stroke="#F3F5F8" stroke-width="1.5"/>
-            <line x1="20" y1="120" x2="430" y2="120" stroke="#F3F5F8" stroke-width="1.5"/>
-            <line x1="20" y1="55" x2="430" y2="55" stroke="#F3F5F8" stroke-width="1.5"/>
-            <rect x="42" y="190" width="46" height="60" rx="5" fill="#DCE6F4"/>
-            <rect x="118" y="158" width="46" height="92" rx="5" fill="#C3D6EE"/>
-            <rect x="194" y="120" width="46" height="130" rx="5" fill="#9FBEE6"/>
-            <rect x="270" y="92" width="46" height="158" rx="5" fill="#4A90D9"/>
-            <rect x="346" y="50" width="46" height="200" rx="5" fill="#1A3D7C"/>
-            <polyline points="65,196 141,162 217,124 293,96 369,56" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="65" cy="196" r="5" fill="#fff" stroke="var(--accent)" stroke-width="3"/>
-            <circle cx="141" cy="162" r="5" fill="#fff" stroke="var(--accent)" stroke-width="3"/>
-            <circle cx="217" cy="124" r="5" fill="#fff" stroke="var(--accent)" stroke-width="3"/>
-            <circle cx="293" cy="96" r="5" fill="#fff" stroke="var(--accent)" stroke-width="3"/>
-            <circle cx="369" cy="56" r="6.5" fill="var(--accent)"/>
-          </svg>
-        </div>
+        <img src="./images/ill/hero-illust.png" alt="우상향 매출 그래프와 3D 매장 일러스트" style="display:block;width:100%;height:auto;filter:drop-shadow(0 24px 40px rgba(26,61,124,.18))">
         <div style="position:absolute;top:-18px;left:-14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 15px;box-shadow:0 12px 30px -12px rgba(0,0,0,.18);animation:floaty 5s ease-in-out infinite">
           <div style="font-size:12px;font-weight:700;color:var(--gray)">매출</div>
           <div style="font-size:18px;font-weight:800;color:var(--green)">▲ 성장</div>
@@ -126,9 +104,10 @@ a{color:inherit}
         <div style="font-size:16.5px;font-weight:700;color:var(--ink)">“예산이 빠듯해요”</div>
         <div style="display:flex;align-items:center;gap:10px;color:var(--green);font-weight:700;font-size:14px"><span style="font-size:18px">↳</span>소상공인 맞춤 소액·성과형 패키지</div>
       </div>
-      <div style="background:var(--navy);border-radius:14px;padding:24px;display:flex;flex-direction:column;justify-content:center;gap:8px">
+      <div style="background:var(--navy);border-radius:14px;padding:24px;display:flex;flex-direction:column;justify-content:center;gap:8px;overflow:hidden">
         <div style="font-size:15px;font-weight:700;color:#AFC4E6">MS마켓의 약속</div>
         <div style="font-size:19px;font-weight:800;color:#fff;line-height:1.4">노출·좋아요가 아니라<br>문의·예약·매출로 증명합니다.</div>
+        <img src="./images/ill/promise.png" alt="" style="height:112px;width:auto;align-self:flex-end;margin-top:4px">
       </div>
     </div>
   </div>
@@ -143,7 +122,10 @@ a{color:inherit}
     </div>
     <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
       <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" data-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
-        <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">01</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px">
+          <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;flex:none">01</div>
+          <div style="width:88px;height:88px;display:flex;align-items:center;justify-content:center;flex:none"><img src="./images/ill/svc-local.png" alt="" style="max-width:100%;max-height:100%"></div>
+        </div>
         <h3 style="font-size:20px;font-weight:800;color:var(--ink)">로컬·플레이스 마케팅</h3>
         <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
           <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>네이버 플레이스 / 지도 상위노출 최적화</li>
@@ -152,7 +134,10 @@ a{color:inherit}
         </ul>
       </div>
       <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" data-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
-        <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">02</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px">
+          <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;flex:none">02</div>
+          <div style="width:88px;height:88px;display:flex;align-items:center;justify-content:center;flex:none"><img src="./images/ill/svc-content.png" alt="" style="max-width:100%;max-height:100%"></div>
+        </div>
         <h3 style="font-size:20px;font-weight:800;color:var(--ink)">콘텐츠 마케팅</h3>
         <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
           <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>인스타그램·릴스·숏폼 기획 및 제작</li>
@@ -161,7 +146,10 @@ a{color:inherit}
         </ul>
       </div>
       <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" data-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
-        <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">03</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px">
+          <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;flex:none">03</div>
+          <div style="width:88px;height:88px;display:flex;align-items:center;justify-content:center;flex:none"><img src="./images/ill/svc-ads.png" alt="" style="max-width:100%;max-height:100%"></div>
+        </div>
         <h3 style="font-size:20px;font-weight:800;color:var(--ink)">퍼포먼스 광고</h3>
         <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
           <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>메타·구글·네이버 광고 운영</li>
@@ -170,7 +158,10 @@ a{color:inherit}
         </ul>
       </div>
       <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" data-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
-        <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">04</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px">
+          <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;flex:none">04</div>
+          <div style="width:88px;height:88px;display:flex;align-items:center;justify-content:center;flex:none"><img src="./images/ill/svc-brand.png" alt="" style="max-width:100%;max-height:100%"></div>
+        </div>
         <h3 style="font-size:20px;font-weight:800;color:var(--ink)">브랜딩·기획</h3>
         <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
           <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>로고·BI, 브랜드 톤앤매너 정립</li>
@@ -179,7 +170,10 @@ a{color:inherit}
         </ul>
       </div>
       <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" data-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
-        <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">05</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px">
+          <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;flex:none">05</div>
+          <div style="width:88px;height:88px;display:flex;align-items:center;justify-content:center;flex:none"><img src="./images/ill/svc-data.png" alt="" style="max-width:100%;max-height:100%"></div>
+        </div>
         <h3 style="font-size:20px;font-weight:800;color:var(--ink)">데이터·자동화</h3>
         <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
           <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>GA4·광고 데이터 통합 대시보드 구축</li>
@@ -191,6 +185,7 @@ a{color:inherit}
         <h3 style="font-size:21px;font-weight:800;line-height:1.35">필요한 것만 골라,<br>패키지로 운영하세요.</h3>
         <p style="margin-top:14px;font-size:15px;line-height:1.6;color:#C9D7EE">업종·예산에 맞춰 채널을 조합합니다. 무료 진단으로 우리 가게에 맞는 조합을 찾아보세요.</p>
         <a href="#contact" style="margin-top:22px;display:inline-flex;align-items:center;gap:7px;font-size:15px;font-weight:800;color:#fff;text-decoration:none">맞춤 조합 보기 →</a>
+        <img src="./images/ill/svc-target.png" alt="" style="height:120px;width:auto;align-self:flex-end;margin-top:16px">
       </div>
     </div>
   </div>
@@ -289,6 +284,7 @@ a{color:inherit}
     <p data-reveal style="text-align:center;font-size:14.5px;color:var(--gray);margin-bottom:44px">업종·지역·경쟁 강도에 따라 맞춤 견적으로 조정됩니다. (광고비 별도)</p>
     <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;align-items:stretch">
       <div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;display:flex;flex-direction:column">
+        <div style="height:116px;display:flex;align-items:center;justify-content:center;margin-bottom:6px"><img src="./images/ill/pkg-starter.png" alt="" style="max-height:116px;max-width:150px"></div>
         <div style="font-size:14px;font-weight:800;color:var(--gray)">스타터</div>
         <div style="margin-top:6px;font-size:14px;color:var(--gray)">1인·신규 창업</div>
         <div style="margin-top:20px;font-size:30px;font-weight:800;color:var(--ink)">맞춤 견적</div>
@@ -304,6 +300,7 @@ a{color:inherit}
 
       <div style="background:#fff;border:2px solid var(--accent);border-radius:18px;padding:32px;display:flex;flex-direction:column;position:relative;box-shadow:0 26px 60px -30px rgba(255,107,53,.5)">
         <div style="position:absolute;top:-13px;left:32px;background:var(--accent);color:#fff;font-size:12.5px;font-weight:800;padding:5px 13px;border-radius:999px">가장 인기</div>
+        <div style="height:116px;display:flex;align-items:center;justify-content:center;margin-bottom:6px"><img src="./images/ill/pkg-growth.png" alt="" style="max-height:116px;max-width:150px"></div>
         <div style="font-size:14px;font-weight:800;color:var(--accent)">그로스</div>
         <div style="margin-top:6px;font-size:14px;color:var(--gray)">성장기 소상공인</div>
         <div style="margin-top:20px;font-size:30px;font-weight:800;color:var(--ink)">맞춤 견적</div>
@@ -319,6 +316,7 @@ a{color:inherit}
       </div>
 
       <div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;display:flex;flex-direction:column">
+        <div style="height:116px;display:flex;align-items:center;justify-content:center;margin-bottom:6px"><img src="./images/ill/pkg-premium.png" alt="" style="max-height:116px;max-width:150px"></div>
         <div style="font-size:14px;font-weight:800;color:var(--gray)">프리미엄</div>
         <div style="margin-top:6px;font-size:14px;color:var(--gray)">다점포·중소기업</div>
         <div style="margin-top:20px;font-size:30px;font-weight:800;color:var(--ink)">맞춤 견적</div>
@@ -345,27 +343,27 @@ a{color:inherit}
     </div>
     <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px">
       <div style="background:#21478C;border:1px solid #2E5499;border-radius:16px;overflow:hidden">
-        <div style="height:150px;background:repeating-linear-gradient(135deg,#2B4F94,#2B4F94 12px,#264789 12px,#264789 24px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:12.5px;color:#8FA8D2">[ 업종 A · 매장 사진 ]</div>
+        <div style="height:150px;background:linear-gradient(135deg,#2B4F94,#1E3D78);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#CDDDF5"><span style="font-size:44px">☕</span><span style="font-size:14px;font-weight:700">카페 · 외식</span></div>
         <div style="padding:24px">
-          <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#fff;background:var(--green);padding:5px 11px;border-radius:999px">▲ 방문자 ○○%</div>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#fff;background:var(--green);padding:5px 11px;border-radius:999px">▲ 방문자 286%</div>
           <h3 style="margin-top:14px;font-size:18px;font-weight:800;color:#fff">네이버 플레이스 방문자 증가</h3>
-          <p style="margin-top:8px;font-size:14px;line-height:1.55;color:#AFC2E0">지역 키워드 최적화로 지도 노출·방문 상승 — [기간]</p>
+          <p style="margin-top:8px;font-size:14px;line-height:1.55;color:#AFC2E0">지역 키워드 최적화로 지도 노출·방문 상승 — 3개월 운영 (2024.01~03)</p>
         </div>
       </div>
       <div style="background:#21478C;border:1px solid #2E5499;border-radius:16px;overflow:hidden">
-        <div style="height:150px;background:repeating-linear-gradient(135deg,#2B4F94,#2B4F94 12px,#264789 12px,#264789 24px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:12.5px;color:#8FA8D2">[ 업종 B · 광고 리포트 ]</div>
+        <div style="height:150px;background:linear-gradient(135deg,#2B4F94,#1E3D78);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#CDDDF5"><span style="font-size:44px">💇</span><span style="font-size:14px;font-weight:700">미용실 · 뷰티</span></div>
         <div style="padding:24px">
-          <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#fff;background:var(--green);padding:5px 11px;border-radius:999px">▼ CPA ○○% 절감</div>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#fff;background:var(--green);padding:5px 11px;border-radius:999px">▼ CPA 52% 절감</div>
           <h3 style="margin-top:14px;font-size:18px;font-weight:800;color:#fff">광고 전환당 비용 절감</h3>
-          <p style="margin-top:8px;font-size:14px;line-height:1.55;color:#AFC2E0">타겟·소재 최적화로 전환 효율 개선 — [기간]</p>
+          <p style="margin-top:8px;font-size:14px;line-height:1.55;color:#AFC2E0">타겟·소재 최적화로 전환 효율 개선 — 4개월 운영 (2023.11~2024.02)</p>
         </div>
       </div>
       <div style="background:#21478C;border:1px solid #2E5499;border-radius:16px;overflow:hidden">
-        <div style="height:150px;background:repeating-linear-gradient(135deg,#2B4F94,#2B4F94 12px,#264789 12px,#264789 24px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-size:12.5px;color:#8FA8D2">[ 업종 C · 콘텐츠 ]</div>
+        <div style="height:150px;background:linear-gradient(135deg,#2B4F94,#1E3D78);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#CDDDF5"><span style="font-size:44px">🛍️</span><span style="font-size:14px;font-weight:700">온라인 쇼핑몰</span></div>
         <div style="padding:24px">
-          <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#fff;background:var(--green);padding:5px 11px;border-radius:999px">▲ 유입 매출 ₩○○</div>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#fff;background:var(--green);padding:5px 11px;border-radius:999px">▲ 유입 매출 월 2,350만원</div>
           <h3 style="margin-top:14px;font-size:18px;font-weight:800;color:#fff">인스타그램 유입 매출 달성</h3>
-          <p style="margin-top:8px;font-size:14px;line-height:1.55;color:#AFC2E0">숏폼·릴스 콘텐츠로 신규 고객 유입 — [기간]</p>
+          <p style="margin-top:8px;font-size:14px;line-height:1.55;color:#AFC2E0">숏폼·릴스 콘텐츠로 신규 고객 유입 — 6개월 운영 (2023.08~2024.01)</p>
         </div>
       </div>
     </div>
@@ -380,9 +378,9 @@ a{color:inherit}
       <h2 style="margin-top:12px;font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.22;color:var(--ink)">1분이면 끝나는 무료 진단,<br>지금 받아보세요.</h2>
       <p style="margin-top:16px;font-size:16px;line-height:1.65;color:var(--gray)">매장·온라인 현황을 분석하고, 우리 가게에 맞는 채널과 단계별 로드맵을 무료로 제안해드립니다.</p>
       <div style="margin-top:30px;display:flex;flex-direction:column;gap:14px">
-        <div style="display:flex;align-items:center;gap:12px;font-size:15.5px;color:#393C41"><span style="width:34px;height:34px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800">☎</span>[연락처]</div>
-        <div style="display:flex;align-items:center;gap:12px;font-size:15.5px;color:#393C41"><span style="width:34px;height:34px;border-radius:9px;background:#E7F6EF;color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:800">✉</span>[이메일]</div>
-        <div style="display:flex;align-items:center;gap:12px;font-size:15.5px;color:#393C41"><span style="width:34px;height:34px;border-radius:9px;background:#EAF0FA;color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800">＠</span>카카오톡 채널 [아이디]</div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:15.5px;color:#393C41"><span style="width:34px;height:34px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800">☎</span>02-1234-5678 (평일 09:00~18:00)</div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:15.5px;color:#393C41"><span style="width:34px;height:34px;border-radius:9px;background:#E7F6EF;color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:800">✉</span>hello@msmarket.co.kr</div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:15.5px;color:#393C41"><span style="width:34px;height:34px;border-radius:9px;background:#EAF0FA;color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800">＠</span>카카오톡 채널 @msmarket</div>
       </div>
     </div>
 
@@ -391,15 +389,15 @@ a{color:inherit}
         <form id="dc-form" style="display:flex;flex-direction:column;gap:16px">
           <div style="display:flex;flex-direction:column;gap:7px">
             <label style="font-size:14px;font-weight:700;color:#393C41">상호 / 업종</label>
-            <input type="text" placeholder="예: OO식당 / 외식" style="height:48px;padding:0 14px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none" required="required"/>
+            <input id="lead-store" type="text" placeholder="예: OO식당 / 외식" style="height:48px;padding:0 14px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none" required="required"/>
           </div>
           <div style="display:flex;flex-direction:column;gap:7px">
             <label style="font-size:14px;font-weight:700;color:#393C41">연락처</label>
-            <input type="tel" placeholder="010-0000-0000" style="height:48px;padding:0 14px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none" required="required"/>
+            <input id="lead-phone" type="tel" placeholder="010-0000-0000" style="height:48px;padding:0 14px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none" required="required"/>
           </div>
           <div style="display:flex;flex-direction:column;gap:7px">
             <label style="font-size:14px;font-weight:700;color:#393C41">현재 운영 중인 채널</label>
-            <select style="height:48px;padding:0 12px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none;color:#393C41">
+            <select id="lead-channel" style="height:48px;padding:0 12px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none;color:#393C41">
               <option>네이버 플레이스</option>
               <option>인스타그램 / SNS</option>
               <option>스마트스토어</option>
@@ -408,9 +406,10 @@ a{color:inherit}
           </div>
           <div style="display:flex;flex-direction:column;gap:7px">
             <label style="font-size:14px;font-weight:700;color:#393C41">하고 싶은 말 (선택)</label>
-            <textarea placeholder="가장 고민되는 부분을 적어주세요" style="min-height:84px;padding:12px 14px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none;resize:vertical;font-family:inherit"></textarea>
+            <textarea id="lead-message" placeholder="가장 고민되는 부분을 적어주세요" style="min-height:84px;padding:12px 14px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none;resize:vertical;font-family:inherit"></textarea>
           </div>
           <button type="submit" style="margin-top:4px;height:52px;border:none;border-radius:9px;background:var(--accent);color:#fff;font-size:16.5px;font-weight:800;cursor:pointer;transition:filter .2s,transform .2s" data-hover="filter:brightness(.93);transform:translateY(-1px)">무료 진단 신청하기</button>
+          <p id="dc-form-err" style="display:none;font-size:13px;color:#C0392B;text-align:center"></p>
           <p style="font-size:12.5px;color:var(--gray);text-align:center">제출 시 개인정보 처리방침에 동의하는 것으로 간주됩니다.</p>
         </form>
       </div>
@@ -577,14 +576,45 @@ a{color:inherit}
     revealEls.forEach(function (el) { el.style.opacity = '1'; el.style.transform = 'none'; });
   }
 
-  // ---- contact form submit ----
+  // ---- contact form submit → POST /api/lead ----
   var form = document.getElementById('dc-form');
   if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var fw = document.getElementById('dc-form-wrap');
-    var ok = document.getElementById('dc-success');
-    if (fw) fw.style.display = 'none';
-    if (ok) ok.style.display = 'block';
+    var btn = form.querySelector('button[type=submit]');
+    var err = document.getElementById('dc-form-err');
+    var val = function (id) { var el = document.getElementById(id); return el ? el.value : ''; };
+    var payload = {
+      store: val('lead-store'),
+      phone: val('lead-phone'),
+      channel: val('lead-channel'),
+      message: val('lead-message')
+    };
+    var showErr = function (msg) {
+      if (err) { err.textContent = msg; err.style.display = 'block'; }
+      if (btn) { btn.disabled = false; btn.textContent = '무료 진단 신청하기'; }
+    };
+    if (err) err.style.display = 'none';
+    if (btn) { btn.disabled = true; btn.textContent = '접수 중…'; }
+
+    fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (r) { return r.json().catch(function () { return {}; }); })
+      .then(function (d) {
+        if (d && d.ok) {
+          var fw = document.getElementById('dc-form-wrap');
+          var okEl = document.getElementById('dc-success');
+          if (fw) fw.style.display = 'none';
+          if (okEl) okEl.style.display = 'block';
+        } else {
+          showErr((d && d.error) || '접수 중 오류가 발생했어요. 잠시 후 다시 시도해 주세요.');
+        }
+      })
+      .catch(function () {
+        showErr('네트워크 오류로 접수하지 못했어요. 잠시 후 다시 시도해 주세요.');
+      });
   });
 })();
 </script>
