@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<title>MS마켓 — 광고비는 줄이고, 매출은 올리고</title>
+<meta name="description" content="중소기업·소상공인을 위한 실전형 디지털 마케팅 대행사 MS마켓. 로컬·플레이스, 퍼포먼스 광고, 콘텐츠·브랜딩으로 매출을 만듭니다.">
+<meta property="og:title" content="MS마켓 — 매출을 만든다">
+<meta property="og:description" content="중소기업·소상공인을 위한 실전형 디지털 마케팅 대행사.">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -18,21 +18,15 @@ body{font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFo
 @keyframes floaty2{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
 a{color:inherit}
 </style>
-</helmet>
-
-<div ref="{{ setRoot }}" style="--navy:#1A3D7C;--orange:#FF6B35;--green:#2BB673;--sky:#4A90D9;--ink:#1C1C1E;--gray:#6E6E73;--line:#E5E5EA;--accent:#FF6B35;--accent-soft:#FFF1EB;position:relative;overflow:hidden;width:100%">
+</head>
+<body>
+<div id="dc-root" style="--navy:#1A3D7C;--orange:#FF6B35;--green:#2BB673;--sky:#4A90D9;--ink:#1C1C1E;--gray:#6E6E73;--line:#E5E5EA;--accent:#FF6B35;--accent-soft:#FFF1EB;position:relative;overflow:hidden;width:100%">
 
 <!-- NAV -->
-<nav ref="{{ setNav }}" style="position:fixed;top:0;left:0;right:0;z-index:100;height:72px;display:flex;align-items:center;border-bottom:1px solid transparent;transition:background .3s,border-color .3s,backdrop-filter .3s">
+<nav id="dc-nav" style="position:fixed;top:0;left:0;right:0;z-index:100;height:72px;display:flex;align-items:center;border-bottom:1px solid transparent;transition:background .3s,border-color .3s,backdrop-filter .3s">
   <div style="max-width:1200px;width:100%;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:24px">
     <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none">
-      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
-        <rect x="2" y="17" width="5.2" height="11" rx="1.4" fill="#1A3D7C"/>
-        <rect x="9.4" y="11" width="5.2" height="17" rx="1.4" fill="#1A3D7C"/>
-        <rect x="16.8" y="5.5" width="5.2" height="22.5" rx="1.4" fill="#4A90D9"/>
-        <circle cx="25.6" cy="4.4" r="2.6" fill="#FF6B35"/>
-      </svg>
-      <span style="font-size:20px;font-weight:800;letter-spacing:-.01em;color:#1A3D7C">MS마켓</span>
+      <img src="./uploads/logo-mark.png" alt="MS마켓 로고" style="height:46px;width:auto;display:block">
     </a>
     <div style="display:flex;align-items:center;gap:30px;font-size:15px;font-weight:600;color:#393C41" data-nav-links>
       <a href="#services" style="text-decoration:none">서비스</a>
@@ -41,7 +35,7 @@ a{color:inherit}
       <a href="#pricing" style="text-decoration:none">요금</a>
       <a href="#cases" style="text-decoration:none">성과</a>
     </div>
-    <a href="#contact" style="display:inline-flex;align-items:center;height:42px;padding:0 20px;border-radius:6px;background:var(--accent);color:#fff;font-size:15px;font-weight:700;text-decoration:none;transition:filter .2s,transform .2s" style-hover="filter:brightness(.93);transform:translateY(-1px)">무료 진단 신청</a>
+    <a href="#contact" style="display:inline-flex;align-items:center;height:42px;padding:0 20px;border-radius:6px;background:var(--accent);color:#fff;font-size:15px;font-weight:700;text-decoration:none;transition:filter .2s,transform .2s" data-hover="filter:brightness(.93);transform:translateY(-1px)">무료 진단 신청</a>
   </div>
 </nav>
 
@@ -55,8 +49,8 @@ a{color:inherit}
       <h1 style="font-size:clamp(36px,5.4vw,60px);line-height:1.12;font-weight:800;letter-spacing:-.025em;color:var(--ink)">사장님은 본업에만,<br>마케팅은 <span style="color:var(--accent)">MS마켓</span>이.</h1>
       <p style="margin-top:24px;font-size:clamp(17px,2.1vw,20px);line-height:1.6;color:var(--gray);max-width:480px">광고비는 줄이고, 매출은 올리고.<br>검증된 시스템으로 작은 가게의 매출을 키웁니다.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:34px">
-        <a href="#contact" style="display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 30px;border-radius:7px;background:var(--accent);color:#fff;font-size:16.5px;font-weight:700;text-decoration:none;transition:filter .2s,transform .2s" style-hover="filter:brightness(.93);transform:translateY(-1px)">무료 진단 신청 →</a>
-        <a href="#services" style="display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 28px;border-radius:7px;background:#fff;color:var(--navy);font-size:16.5px;font-weight:700;border:1.5px solid #D5DAE3;text-decoration:none;transition:border-color .2s,transform .2s" style-hover="border-color:var(--navy);transform:translateY(-1px)">서비스 둘러보기</a>
+        <a href="#contact" style="display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 30px;border-radius:7px;background:var(--accent);color:#fff;font-size:16.5px;font-weight:700;text-decoration:none;transition:filter .2s,transform .2s" data-hover="filter:brightness(.93);transform:translateY(-1px)">무료 진단 신청 →</a>
+        <a href="#services" style="display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 28px;border-radius:7px;background:#fff;color:var(--navy);font-size:16.5px;font-weight:700;border:1.5px solid #D5DAE3;text-decoration:none;transition:border-color .2s,transform .2s" data-hover="border-color:var(--navy);transform:translateY(-1px)">서비스 둘러보기</a>
       </div>
       <div style="display:flex;gap:26px;flex-wrap:wrap;margin-top:38px">
         <div style="display:flex;align-items:center;gap:9px;font-size:14.5px;font-weight:600;color:#393C41"><span style="color:var(--green);font-weight:800">✓</span> 전담 매니저 1:1</div>
@@ -148,7 +142,7 @@ a{color:inherit}
       <h2 style="margin-top:12px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.22;color:var(--ink)">매출로 이어지는 다섯 가지 채널, 한 팀이 운영합니다.</h2>
     </div>
     <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
-      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" style-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
+      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" data-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
         <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">01</div>
         <h3 style="font-size:20px;font-weight:800;color:var(--ink)">로컬·플레이스 마케팅</h3>
         <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
@@ -157,7 +151,7 @@ a{color:inherit}
           <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>지역 키워드 블로그·체험단 운영</li>
         </ul>
       </div>
-      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" style-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
+      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" data-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
         <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">02</div>
         <h3 style="font-size:20px;font-weight:800;color:var(--ink)">콘텐츠 마케팅</h3>
         <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
@@ -166,7 +160,7 @@ a{color:inherit}
           <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>네이버 블로그 / 스마트스토어 운영</li>
         </ul>
       </div>
-      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" style-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
+      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" data-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
         <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">03</div>
         <h3 style="font-size:20px;font-weight:800;color:var(--ink)">퍼포먼스 광고</h3>
         <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
@@ -175,7 +169,7 @@ a{color:inherit}
           <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>전환 추적(픽셀·전환 API) 세팅</li>
         </ul>
       </div>
-      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" style-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
+      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" data-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
         <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">04</div>
         <h3 style="font-size:20px;font-weight:800;color:var(--ink)">브랜딩·기획</h3>
         <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
@@ -184,7 +178,7 @@ a{color:inherit}
           <li style="display:flex;gap:8px"><span style="color:var(--accent)">•</span>캠페인·프로모션 기획</li>
         </ul>
       </div>
-      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" style-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
+      <div style="border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff;transition:border-color .25s,transform .25s,box-shadow .25s" data-hover="border-color:var(--accent);transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(26,61,124,.3)">
         <div style="display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:15px;font-weight:800;margin-bottom:20px">05</div>
         <h3 style="font-size:20px;font-weight:800;color:var(--ink)">데이터·자동화</h3>
         <ul style="margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--gray);font-size:15px;line-height:1.5">
@@ -305,7 +299,7 @@ a{color:inherit}
           <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>월 콘텐츠 8건 제작</li>
           <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>월간 성과 리포트</li>
         </ul>
-        <a href="#contact" style="margin-top:26px;display:inline-flex;align-items:center;justify-content:center;height:50px;border-radius:8px;background:#fff;border:1.5px solid #D5DAE3;color:var(--navy);font-weight:700;font-size:15.5px;text-decoration:none;transition:border-color .2s" style-hover="border-color:var(--navy)">문의하기</a>
+        <a href="#contact" style="margin-top:26px;display:inline-flex;align-items:center;justify-content:center;height:50px;border-radius:8px;background:#fff;border:1.5px solid #D5DAE3;color:var(--navy);font-weight:700;font-size:15.5px;text-decoration:none;transition:border-color .2s" data-hover="border-color:var(--navy)">문의하기</a>
       </div>
 
       <div style="background:#fff;border:2px solid var(--accent);border-radius:18px;padding:32px;display:flex;flex-direction:column;position:relative;box-shadow:0 26px 60px -30px rgba(255,107,53,.5)">
@@ -321,7 +315,7 @@ a{color:inherit}
           <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>소재 A/B 테스트·예산 최적화</li>
           <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>전환 추적 세팅</li>
         </ul>
-        <a href="#contact" style="margin-top:26px;display:inline-flex;align-items:center;justify-content:center;height:50px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;font-size:15.5px;text-decoration:none;transition:filter .2s" style-hover="filter:brightness(.93)">무료 진단 신청</a>
+        <a href="#contact" style="margin-top:26px;display:inline-flex;align-items:center;justify-content:center;height:50px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;font-size:15.5px;text-decoration:none;transition:filter .2s" data-hover="filter:brightness(.93)">무료 진단 신청</a>
       </div>
 
       <div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;display:flex;flex-direction:column">
@@ -335,7 +329,7 @@ a{color:inherit}
           <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>브랜딩·기획</li>
           <li style="display:flex;gap:9px"><span style="color:var(--green);font-weight:800">✓</span>데이터 통합 대시보드</li>
         </ul>
-        <a href="#contact" style="margin-top:26px;display:inline-flex;align-items:center;justify-content:center;height:50px;border-radius:8px;background:#fff;border:1.5px solid #D5DAE3;color:var(--navy);font-weight:700;font-size:15.5px;text-decoration:none;transition:border-color .2s" style-hover="border-color:var(--navy)">문의하기</a>
+        <a href="#contact" style="margin-top:26px;display:inline-flex;align-items:center;justify-content:center;height:50px;border-radius:8px;background:#fff;border:1.5px solid #D5DAE3;color:var(--navy);font-weight:700;font-size:15.5px;text-decoration:none;transition:border-color .2s" data-hover="border-color:var(--navy)">문의하기</a>
       </div>
     </div>
   </div>
@@ -393,8 +387,8 @@ a{color:inherit}
     </div>
 
     <div data-reveal style="flex:1 1 380px;min-width:300px;background:#F6F7F9;border:1px solid var(--line);border-radius:18px;padding:30px">
-      <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
-        <form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:16px">
+      <div id="dc-form-wrap">
+        <form id="dc-form" style="display:flex;flex-direction:column;gap:16px">
           <div style="display:flex;flex-direction:column;gap:7px">
             <label style="font-size:14px;font-weight:700;color:#393C41">상호 / 업종</label>
             <input type="text" placeholder="예: OO식당 / 외식" style="height:48px;padding:0 14px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none" required="required"/>
@@ -416,17 +410,17 @@ a{color:inherit}
             <label style="font-size:14px;font-weight:700;color:#393C41">하고 싶은 말 (선택)</label>
             <textarea placeholder="가장 고민되는 부분을 적어주세요" style="min-height:84px;padding:12px 14px;border:1px solid #D5DAE3;border-radius:9px;font-size:15px;background:#fff;outline:none;resize:vertical;font-family:inherit"></textarea>
           </div>
-          <button type="submit" style="margin-top:4px;height:52px;border:none;border-radius:9px;background:var(--accent);color:#fff;font-size:16.5px;font-weight:800;cursor:pointer;transition:filter .2s,transform .2s" style-hover="filter:brightness(.93);transform:translateY(-1px)">무료 진단 신청하기</button>
+          <button type="submit" style="margin-top:4px;height:52px;border:none;border-radius:9px;background:var(--accent);color:#fff;font-size:16.5px;font-weight:800;cursor:pointer;transition:filter .2s,transform .2s" data-hover="filter:brightness(.93);transform:translateY(-1px)">무료 진단 신청하기</button>
           <p style="font-size:12.5px;color:var(--gray);text-align:center">제출 시 개인정보 처리방침에 동의하는 것으로 간주됩니다.</p>
         </form>
-      </sc-if>
-      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ true }}">
+      </div>
+      <div id="dc-success" style="display:none">
         <div style="text-align:center;padding:40px 10px">
           <div style="width:64px;height:64px;border-radius:50%;background:#E7F6EF;color:var(--green);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:900;margin:0 auto 20px">✓</div>
           <h3 style="font-size:22px;font-weight:800;color:var(--ink)">신청이 접수되었어요!</h3>
           <p style="margin-top:12px;font-size:15.5px;line-height:1.6;color:var(--gray)">전담 매니저가 1영업일 내에 연락드려<br>무료 진단을 진행해드립니다.</p>
         </div>
-      </sc-if>
+      </div>
     </div>
   </div>
 </section>
@@ -436,14 +430,8 @@ a{color:inherit}
   <div style="max-width:1200px;margin:0 auto">
     <div style="display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start">
       <div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-          <svg width="26" height="26" viewBox="0 0 30 30" fill="none" aria-hidden="true">
-            <rect x="2" y="17" width="5.2" height="11" rx="1.4" fill="#5C82C0"/>
-            <rect x="9.4" y="11" width="5.2" height="17" rx="1.4" fill="#5C82C0"/>
-            <rect x="16.8" y="5.5" width="5.2" height="22.5" rx="1.4" fill="#4A90D9"/>
-            <circle cx="25.6" cy="4.4" r="2.6" fill="#FF6B35"/>
-          </svg>
-          <span style="font-size:18px;font-weight:800;color:#fff">MS마켓</span>
+        <div style="margin-bottom:16px">
+          <img src="./uploads/logo-mark-white.png" alt="MS마켓 로고" style="height:60px;width:auto;display:block">
         </div>
         <p style="font-size:14px;color:#7C8AA0;line-height:1.6;max-width:300px">Make Sales — 매출을 만든다.<br>중소기업·소상공인을 위한 실전형 디지털 마케팅 대행사.</p>
       </div>
@@ -474,126 +462,132 @@ a{color:inherit}
 <div style="position:fixed;left:18px;bottom:18px;z-index:120;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;padding:6px 8px 6px 14px;box-shadow:0 10px 30px -12px rgba(0,0,0,.25)">
   <span style="font-size:12px;font-weight:800;color:var(--gray)">테마</span>
   <div style="display:flex;gap:3px;background:#F0F1F4;border-radius:999px;padding:3px">
-    <button data-theme="energy" onClick="{{ onThemeClick }}" style="{{ pillEnergy }}">에너지</button>
-    <button data-theme="trust" onClick="{{ onThemeClick }}" style="{{ pillTrust }}">신뢰</button>
-    <button data-theme="growth" onClick="{{ onThemeClick }}" style="{{ pillGrowth }}">성과</button>
+    <button data-theme="energy" data-theme-btn="energy" style="border:none;cursor:pointer;font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:999px;transition:all .2s;background:var(--accent);color:#fff">에너지</button>
+    <button data-theme="trust" data-theme-btn="trust" style="border:none;cursor:pointer;font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:999px;transition:all .2s;background:transparent;color:#6E6E73">신뢰</button>
+    <button data-theme="growth" data-theme-btn="growth" style="border:none;cursor:pointer;font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:999px;transition:all .2s;background:transparent;color:#6E6E73">성과</button>
   </div>
 </div>
 
 <!-- STICKY BAR -->
-<div ref="{{ setBar }}" style="position:fixed;right:18px;bottom:18px;z-index:115;transform:translateY(160%);transition:transform .4s cubic-bezier(.2,.7,.2,1);display:flex;align-items:center;gap:14px;background:var(--navy);border-radius:14px;padding:14px 16px;box-shadow:0 18px 44px -16px rgba(26,61,124,.6);max-width:calc(100vw - 36px)">
+<div id="dc-bar" style="position:fixed;right:18px;bottom:100px;z-index:115;transform:translateY(160%);transition:transform .4s cubic-bezier(.2,.7,.2,1);display:flex;align-items:center;gap:14px;background:var(--navy);border-radius:14px;padding:14px 16px;box-shadow:0 18px 44px -16px rgba(26,61,124,.6);max-width:calc(100vw - 36px)">
   <div style="display:flex;flex-direction:column;gap:2px">
     <span style="font-size:13px;font-weight:700;color:#AFC4E6">1분이면 끝나는 무료 진단</span>
     <span style="font-size:15px;font-weight:800;color:#fff">지금 우리 가게 매출, 진단받아 보세요</span>
   </div>
-  <a href="#contact" style="display:inline-flex;align-items:center;height:42px;padding:0 18px;border-radius:8px;background:var(--accent);color:#fff;font-size:14.5px;font-weight:800;text-decoration:none;white-space:nowrap;transition:filter .2s" style-hover="filter:brightness(.93)">무료 진단 →</a>
-  <button onClick="{{ closeBar }}" aria-label="닫기" style="border:none;background:transparent;color:#7E97C4;font-size:20px;cursor:pointer;line-height:1;padding:4px">×</button>
+  <a href="#contact" style="display:inline-flex;align-items:center;height:42px;padding:0 18px;border-radius:8px;background:var(--accent);color:#fff;font-size:14.5px;font-weight:800;text-decoration:none;white-space:nowrap;transition:filter .2s" data-hover="filter:brightness(.93)">무료 진단 →</a>
+  <button data-close-bar="1" aria-label="닫기" style="border:none;background:transparent;color:#7E97C4;font-size:20px;cursor:pointer;line-height:1;padding:4px">×</button>
 </div>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;accentTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;energy&quot;,&quot;trust&quot;,&quot;growth&quot;],&quot;default&quot;:&quot;energy&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;stickyBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;revealAnim&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
-class Component extends DCLogic {
-  state = { activeTheme: 'energy', submitted: false, barClosed: false };
 
-  themes = {
+<script>
+(function () {
+  // ---- hover styles (replaces dc-runtime style-hover) ----
+  function parseDecls(s) {
+    var out = [];
+    (s || '').split(';').forEach(function (d) {
+      var i = d.indexOf(':');
+      if (i > -1) out.push([d.slice(0, i).trim(), d.slice(i + 1).trim()]);
+    });
+    return out;
+  }
+  document.querySelectorAll('[data-hover]').forEach(function (el) {
+    var decls = parseDecls(el.getAttribute('data-hover'));
+    el.addEventListener('mouseenter', function () {
+      decls.forEach(function (d) { el.style.setProperty(d[0], d[1]); });
+    });
+    el.addEventListener('mouseleave', function () {
+      decls.forEach(function (d) { el.style.removeProperty(d[0]); });
+    });
+  });
+
+  // ---- theme switcher ----
+  var THEMES = {
     energy: { a: '#FF6B35', s: '#FFF1EB' },
     trust:  { a: '#1A3D7C', s: '#EAF0FA' },
     growth: { a: '#2BB673', s: '#E7F6EF' }
   };
-
-  applyTheme(name) {
-    const t = this.themes[name] || this.themes.energy;
-    if (this.rootEl) {
-      this.rootEl.style.setProperty('--accent', t.a);
-      this.rootEl.style.setProperty('--accent-soft', t.s);
-    }
+  var root = document.getElementById('dc-root');
+  var pillBase = { background: 'transparent', color: '#6E6E73' };
+  function setTheme(name) {
+    var t = THEMES[name] || THEMES.energy;
+    root.style.setProperty('--accent', t.a);
+    root.style.setProperty('--accent-soft', t.s);
+    document.querySelectorAll('[data-theme-btn]').forEach(function (b) {
+      var active = b.getAttribute('data-theme-btn') === name;
+      b.style.background = active ? 'var(--accent)' : 'transparent';
+      b.style.color = active ? '#fff' : '#6E6E73';
+    });
   }
+  document.querySelectorAll('[data-theme-btn]').forEach(function (b) {
+    b.addEventListener('click', function () { setTheme(b.getAttribute('data-theme-btn')); });
+  });
 
-  componentDidMount() {
-    const initial = this.props.accentTheme || 'energy';
-    if (initial !== 'energy') { this.applyTheme(initial); this.setState({ activeTheme: initial }); }
-
-    this._onScroll = () => {
-      const y = window.scrollY || document.documentElement.scrollTop || 0;
-      if (this.navEl) {
-        if (y > 40) {
-          this.navEl.style.background = 'rgba(255,255,255,0.85)';
-          this.navEl.style.backdropFilter = 'saturate(180%) blur(12px)';
-          this.navEl.style.webkitBackdropFilter = 'saturate(180%) blur(12px)';
-          this.navEl.style.borderBottom = '1px solid #E5E5EA';
-        } else {
-          this.navEl.style.background = 'transparent';
-          this.navEl.style.backdropFilter = 'none';
-          this.navEl.style.webkitBackdropFilter = 'none';
-          this.navEl.style.borderBottom = '1px solid transparent';
-        }
-      }
-      if (this.barEl && this.props.stickyBar !== false && !this.state.barClosed) {
-        this.barEl.style.transform = y > 720 ? 'translateY(0)' : 'translateY(160%)';
-      }
-    };
-    window.addEventListener('scroll', this._onScroll, { passive: true });
-    this._onScroll();
-
-    if (this.props.revealAnim !== false && this.rootEl) {
-      const els = Array.from(this.rootEl.querySelectorAll('[data-reveal]'));
-      els.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(24px)';
-        el.style.transition = 'opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)';
-      });
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((ents) => {
-          ents.forEach(e => {
-            if (e.isIntersecting) {
-              e.target.style.opacity = '1';
-              e.target.style.transform = 'none';
-              io.unobserve(e.target);
-            }
-          });
-        }, { threshold: 0.12 });
-        els.forEach(el => io.observe(el));
-        this._io = io;
+  // ---- scroll: nav background + sticky bar ----
+  var nav = document.getElementById('dc-nav');
+  var bar = document.getElementById('dc-bar');
+  var barClosed = false;
+  function onScroll() {
+    var y = window.scrollY || document.documentElement.scrollTop || 0;
+    if (nav) {
+      if (y > 40) {
+        nav.style.background = 'rgba(255,255,255,0.85)';
+        nav.style.backdropFilter = 'saturate(180%) blur(12px)';
+        nav.style.webkitBackdropFilter = 'saturate(180%) blur(12px)';
+        nav.style.borderBottom = '1px solid #E5E5EA';
       } else {
-        els.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+        nav.style.background = 'transparent';
+        nav.style.backdropFilter = 'none';
+        nav.style.webkitBackdropFilter = 'none';
+        nav.style.borderBottom = '1px solid transparent';
       }
     }
+    if (bar && !barClosed) {
+      bar.style.transform = y > 720 ? 'translateY(0)' : 'translateY(160%)';
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  var closeBtn = document.querySelector('[data-close-bar]');
+  if (closeBtn) closeBtn.addEventListener('click', function () {
+    barClosed = true;
+    if (bar) bar.style.transform = 'translateY(160%)';
+  });
+
+  // ---- reveal on scroll ----
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+  revealEls.forEach(function (el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.style.opacity = '1'; el.style.transform = 'none'; });
   }
 
-  componentWillUnmount() {
-    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
-    if (this._io) this._io.disconnect();
-  }
-
-  renderVals() {
-    const at = this.state.activeTheme;
-    const pill = (name) => Object.assign(
-      { border: 'none', cursor: 'pointer', fontSize: '12.5px', fontWeight: 700, padding: '6px 12px', borderRadius: '999px', transition: 'all .2s' },
-      at === name ? { background: 'var(--accent)', color: '#fff' } : { background: 'transparent', color: '#6E6E73' }
-    );
-    return {
-      setRoot: (el) => { this.rootEl = el; },
-      setNav: (el) => { this.navEl = el; },
-      setBar: (el) => { this.barEl = el; },
-      onThemeClick: (e) => {
-        const n = e.currentTarget.getAttribute('data-theme');
-        this.applyTheme(n);
-        this.setState({ activeTheme: n });
-      },
-      onSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
-      closeBar: () => {
-        this.setState({ barClosed: true });
-        if (this.barEl) this.barEl.style.transform = 'translateY(160%)';
-      },
-      pillEnergy: pill('energy'),
-      pillTrust: pill('trust'),
-      pillGrowth: pill('growth'),
-      submitted: this.state.submitted,
-      notSubmitted: !this.state.submitted
-    };
-  }
-}
+  // ---- contact form submit ----
+  var form = document.getElementById('dc-form');
+  if (form) form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var fw = document.getElementById('dc-form-wrap');
+    var ok = document.getElementById('dc-success');
+    if (fw) fw.style.display = 'none';
+    if (ok) ok.style.display = 'block';
+  });
+})();
 </script>
+<script src="./chatbot.js" defer></script>
 </body>
 </html>

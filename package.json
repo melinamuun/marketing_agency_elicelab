@@ -1,0 +1,13 @@
+{
+  "name": "ms-market-chatbot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MS마켓 랜딩페이지 + 플로팅 상담 챗봇",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
